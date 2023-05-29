@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 import os
 
-train_img_root = '/home/ssd_storage/datasets/students/expertise/Hands_upright/train/'
+train_img_root = '/home/ssd_storage/datasets/students/expertise/Experiment_1/hands_only/train/'
 
 def calc_avg_mean_std(folder_names, img_root, size):
     mean_sum = np.array([0., 0., 0.])
@@ -18,7 +18,7 @@ def calc_avg_mean_std(folder_names, img_root, size):
       for img_name in img_names:
           #print(f'img_name = {img_name}')
           try:
-            print(f'path = {img_root + os.path.join(folder ,img_name)}')
+            #print(f'path = {img_root + os.path.join(folder ,img_name)}')
             img = cv2.imread(img_root + os.path.join(folder ,img_name))
             img = cv2.resize(img, size)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
