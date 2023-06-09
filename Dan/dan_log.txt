@@ -1,0 +1,8 @@
+RUNNING FACES:
+
+(expertise) expertise@psychology213:/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py --config_path /home/expertise/Git/FaceRecognitionSeminar/configs/yonatan_and_dan/faces_260_fixed.cfg
+
+
+RUNNING HANDS:
+
+(expertise) expertise@psychology213:/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py --config_path /home/expertise/Git/FaceRecognitionSeminar/configs/yonatan_and_dan/hands.cfg

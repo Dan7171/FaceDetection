@@ -1,0 +1,4 @@
+
+python dir_experiments.py --config_path /home/ssd_storage/experiments/students/expertise/configs/handonly.cfg
+
+conda activate expertise

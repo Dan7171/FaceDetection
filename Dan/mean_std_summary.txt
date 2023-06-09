@@ -1,0 +1,26 @@
+
+
+20% faces 80% hands:
+
+$ /home/administrator/anaconda3/envs/expertise/bin/python /home/expertise/Dan/calc_mean_std.py.py
+started run
+size = (1600, 1200)
+num of folders = 189
+total number of images:  18900
+calculating mean and std for dataset /home/expertise/Dan/20%_faces_80%_hands_for_mean_std/
+train mean: [157.60239476 133.31673012 121.84716133], NORMALIZED: [0.61804861 0.52281071 0.47783201]
+train std: [69.09458875 66.38467954 61.63490209], NORMALIZED: [0.27095917 0.26033208 0.2417055 ]
+
+
+
+80% faces 20% hands:
+
+auncher 38517 -- /home/expertise/Dan/calc_mean_std.py.py 
+source /home/administrator/anaconda3/bin/activate expertise
+started run
+size = (1600, 1200)
+num of folders = 189
+total number of images:  18900
+calculating mean and std for dataset home/expertise/Dan/80%_faces_20%_hands_for_mean_std/
+train mean: [147.66219256 117.45856601 103.15874475], NORMALIZED: [0.57906742 0.46062183 0.4045441 ]
+train std: [63.19888895 56.53450538 53.11614533], NORMALIZED: [0.24783878 0.22170394 0.20829861]
