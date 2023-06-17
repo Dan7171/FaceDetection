@@ -1,0 +1,30 @@
+2023-06-14 10:35:31.832730
+Running experiment {config_path}
+
+Running experiment Experiment_2_year_1
+/home/hdd_storage/mlflow/artifact_store/Experiment_2_year_1/7d38387a712540d797b2966cd4546240/artifacts
+training on dataset:  /home/ssd_storage/datasets/students/expertise/Dan/Experiment_2_datasets/year_1_20_faces_80_hands_train_val_100_classes
+=> creating model 'resnet50'
+=> creating model 'resnet50'
+Traceback (most recent call last):
+  File "/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py", line 176, in <module>
+    run_experiment(args.config_path)
+  File "/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py", line 111, in run_experiment
+    trainer = get_trainer(config, num_classes, start_epoch, lfw_tester)
+  File "/home/expertise/Git/FaceRecognitionSeminar/experiment_setup/triplet_trainer_setup.py", line 59, in get_trainer
+    trainer = trainer_factory.get_trainer(config['MODELLING']['architecture'],
+  File "/home/expertise/Git/FaceRecognitionSeminar/modelling/factories/triplet_trainer_factory.py", line 41, in get_trainer
+    model = self.model_initializer.get_model(arch, is_pretrained, num_classes, use_arcface)
+  File "/home/expertise/Git/FaceRecognitionSeminar/modelling/factories/triplet_model_factory.py", line 27, in get_model
+    model = super(TripletModelInitializer, self).get_model(arch, is_pretrained, num_classes)
+  File "/home/expertise/Git/FaceRecognitionSeminar/modelling/factories/model_initializer.py", line 34, in get_model
+    model.cuda()
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/torch/nn/modules/module.py", line 463, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/torch/nn/modules/module.py", line 381, in _apply
+    param_applied = fn(param)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/torch/nn/modules/module.py", line 463, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+KeyboardInterrupt

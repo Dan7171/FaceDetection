@@ -1,0 +1,78 @@
+2023-06-14 15:54:46.291591
+Running experiment {config_path}
+
+Running experiment Experiment_2_year_1
+Traceback (most recent call last):
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/http/client.py", line 276, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/http/client.py", line 1347, in getresponse
+    response.begin()
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/http/client.py", line 276, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py", line 176, in <module>
+    run_experiment(args.config_path)
+  File "/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py", line 48, in run_experiment
+    if mlflow.get_experiment_by_name(config['GENERAL']['experiment_name']) is None:
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/tracking/fluent.py", line 822, in get_experiment_by_name
+    return MlflowClient().get_experiment_by_name(name)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/tracking/client.py", line 463, in get_experiment_by_name
+    return self._tracking_client.get_experiment_by_name(name)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/tracking/_tracking_service/client.py", line 155, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/store/tracking/rest_store.py", line 278, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/utils/rest_utils.py", line 163, in call_endpoint
+    response = http_request(
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/utils/rest_utils.py", line 82, in http_request
+    response = request_with_ratelimit_retries(
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/mlflow/utils/rest_utils.py", line 62, in request_with_ratelimit_retries
+    response = requests.request(**kwargs)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

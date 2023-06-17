@@ -15,7 +15,7 @@ train_img_root = "/home/ssd_storage/datasets/students/expertise/Dan/Experiment_2
 
 **** commands:
 # environment:
-conda activate expertise fixed 
+conda activate expertise_fixed 
 # gpu status:
  nvidia-smi
  
@@ -46,11 +46,15 @@ Data sets 100 classes per config (new- as same as noam's):
 
 
 year 1:
-Train first on 80 hands and switch to 80 faces:
+Train first on 80 hands
 
 python /home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py --config_path /home/expertise/Git/FaceRecognitionSeminar/Dan/9_6_23/configs_9_6_23/20_faces_80_hands.cfg
+nohup python /home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py --config_path /home/expertise/Git/FaceRecognitionSeminar/Dan/9_6_23/configs_9_6_23/20_faces_80_hands.cfg > /home/expertise/Git/FaceRecognitionSeminar/Dan/14_6_23/run_results/year_1.txt
 
 yaer 2: (epoch starts from end of year 1)
-Train first on 80 faces and switch to 80 hands: 
+Train first on 80 faces  
 
 python /home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py --config_path /home/expertise/Git/FaceRecognitionSeminar/Dan/9_6_23/configs_9_6_23/80_faces_20_hands.cfg
+
+
+nohup python /home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py --config_path /home/expertise/Git/FaceRecognitionSeminar/Dan/9_6_23/configs_9_6_23/20_faces_80_hands.cfg > /home/expertise/Git/FaceRecognitionSeminar/Dan/14_6_23/run_results/year_2.txt

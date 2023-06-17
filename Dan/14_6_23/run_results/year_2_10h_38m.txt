@@ -1,0 +1,25 @@
+/home/administrator/anaconda3/envs/expertise_fixed/lib/python3.8/site-packages/torch/cuda/__init__.py:52: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370172916/work/c10/cuda/CUDAFunctions.cpp:100.)
+  return torch._C._cuda_getDeviceCount() > 0
+2023-06-14 16:07:03.359333
+Running experiment {config_path}
+
+Running experiment Experiment_2_year_2
+/home/hdd_storage/mlflow/artifact_store/Experiment_2_year_2/b9eb8c8e95cd46d3a99d2c421391d854/artifacts
+training on dataset:  /home/ssd_storage/datasets/students/expertise/Dan/Experiment_2_datasets/year_2_80_faces_20_hands_train_val_100_classes
+/home/ssd_storage/experiments/students/expertise/Experiment_2_year_1/resnet50/models/50.pth
+=> creating model 'resnet50'
+=> creating model 'resnet50'
+Using CPU, run times may be long.
+/home/ssd_storage/experiments/students/expertise/Experiment_2_year_1/resnet50/models/50.pth
+Traceback (most recent call last):
+  File "/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py", line 176, in <module>
+    run_experiment(args.config_path)
+  File "/home/expertise/Git/FaceRecognitionSeminar/dir_experiments.py", line 111, in run_experiment
+    trainer = get_trainer(config, num_classes, start_epoch, lfw_tester)
+  File "/home/expertise/Git/FaceRecognitionSeminar/experiment_setup/triplet_trainer_setup.py", line 59, in get_trainer
+    trainer = trainer_factory.get_trainer(config['MODELLING']['architecture'],
+  File "/home/expertise/Git/FaceRecognitionSeminar/modelling/factories/triplet_trainer_factory.py", line 48, in get_trainer
+    model, _, acc, epoch = self.model_store.load_model_and_optimizer_loc(model, None, checkpoint)
+  File "/home/expertise/Git/FaceRecognitionSeminar/modelling/local_model_store.py", line 28, in load_model_and_optimizer_loc
+    with open(model_location, 'br') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ssd_storage/experiments/students/expertise/Experiment_2_year_1/resnet50/models/50.pth'
